@@ -37,7 +37,7 @@ const Report = () => {
     const getUser = async () => {
       try {
         const BASEURL = import.meta.env.VITE_BASE_URL;
-        const res = await fetch(`${BASEURL}users/user/${userId}`, {
+        const res = await fetch(`https://teachhub.up.railway.app/api/users/user/${userId}`, {
           method: 'GET',
           credentials: 'include',
         });

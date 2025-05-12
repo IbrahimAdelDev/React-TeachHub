@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const authRes = await fetch(`${import.meta.env.VITE_BASE_URL}users/auth`, {
+        const authRes = await fetch(`https://teachhub.up.railway.app/api/users/auth`, {
           credentials: 'include',
         });
         if (authRes.ok) {
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         }
         setIsAdmin(false); 
         if(checkAdmin) {
-          const adminRes = await fetch(`${import.meta.env.VITE_BASE_URL}users/auth/admin`, {
+          const adminRes = await fetch(`https://teachhub.up.railway.app/api/users/auth/admin`, {
             credentials: 'include',
           });
           if (adminRes.ok) {

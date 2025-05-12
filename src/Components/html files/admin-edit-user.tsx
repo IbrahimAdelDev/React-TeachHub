@@ -34,7 +34,7 @@ const AdminEditUser = () => {
   const handleSave = async (user: User) => {
     try {
       const userString = JSON.stringify(user);
-      const res = await fetch(`${import.meta.env.VITE_BASE_URL}users/user/update/${user._id}`, {
+      const res = await fetch(`https://teachhub.up.railway.app/api/users/user/update/${user._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const AdminEditUser = () => {
   // حذف المستخدم (إرسال البيانات كـ string)
   const handleDelete = async (id: string) => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_BASE_URL}users/user/delete/${id}`, {
+      const res = await fetch(`https://teachhub.up.railway.app/api/users/user/delete/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -82,7 +82,7 @@ const AdminEditUser = () => {
     const getUsers = async () => {
       try {
         const BASEURL = import.meta.env.VITE_BASE_URL;
-        const res = await fetch(`${BASEURL}users`, {
+        const res = await fetch(`https://teachhub.up.railway.app/api/users`, {
           method: 'GET',
           credentials: 'include',
         });
