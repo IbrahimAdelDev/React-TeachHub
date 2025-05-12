@@ -1,0 +1,10 @@
+@media (max-width: 1023px) {
+  .mobile-hidden-nav {
+    display: none;
+  }
+}
+
+.sign-up-btn{
+    background-color: #C89934;
+}
+
